@@ -1,31 +1,34 @@
-class Garden
-  attr_accessor :name
+require_relative './plant.rb'
+require_relative './garden.rb'
 
-  def initialize(name:)
-    @name = name
-  end
+# class Garden
+#   attr_accessor :name
 
-  def plants
-    Plant.all.select do |plant|
-      plant.garden == self
-    end
-  end
-end
+#   def initialize(name:)
+#     @name = name
+#   end
 
-class Plant
-  attr_accessor :garden, :name
+#   def plants
+#     Plant.all.select do |plant|
+#       plant.garden == self
+#     end
+#   end
+# end
 
-  @@all = []
+# class Plant
+#   attr_accessor :garden, :name
 
-  def initialize(name:)
-    @name = name
-    @@all << self
-  end
+#   @@all = []
 
-  def self.all
-    @@all
-  end
-end
+#   def initialize(name:)
+#     @name = name
+#     @@all << self
+#   end
+
+#   def self.all
+#     @@all
+#   end
+# end
 
 lawn = Garden.new(name: 'Front Lawn')
 
