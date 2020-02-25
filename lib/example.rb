@@ -1,3 +1,4 @@
+#Doing this instead of adding them to both classes since this is the run file
 require_relative './plant.rb'
 require_relative './garden.rb'
 
